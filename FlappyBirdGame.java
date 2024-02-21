@@ -1,14 +1,11 @@
+// FlappyBirdGame.java dosyası
 import javax.swing.*;
-
+import java.awt.*;
 import classes.ScoreManager;
 import interfaces.Scoreable;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 public class FlappyBirdGame extends JFrame {
-    
+
     private Scoreable scoreManager = new ScoreManager();
 
     public FlappyBirdGame() {

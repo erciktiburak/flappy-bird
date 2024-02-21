@@ -1,12 +1,13 @@
-// FlappyBirdGame.java dosyası
 import javax.swing.*;
 import java.awt.*;
 import classes.ScoreManager;
 import interfaces.Scoreable;
+import classes.Bird; // Import the Bird class
 
 public class FlappyBirdGame extends JFrame {
 
     private Scoreable scoreManager = new ScoreManager();
+    private Bird bird; // Declare a Bird object
 
     public FlappyBirdGame() {
         setTitle("Flappy Bird");
@@ -15,6 +16,9 @@ public class FlappyBirdGame extends JFrame {
         setUndecorated(true); // Remove window decorations (title bar, etc.)
         setLocationRelativeTo(null);
 
+        // Create a new Bird object
+        bird = new Bird(100, 300, 20, 20); // Example position and size
+
         JPanel gamePanel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -22,6 +26,9 @@ public class FlappyBirdGame extends JFrame {
                 // Draw the background
                 g.setColor(Color.CYAN);
                 g.fillRect(0, 0, getWidth(), getHeight());
+
+                // Draw the bird
+                bird.draw(g);
 
                 // Draw the score at the top center of the screen
                 g.setColor(Color.BLACK);

@@ -16,7 +16,13 @@ public class FlappyBirdGame extends JFrame {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                // You can draw the game graphics (e.g., background, bird, pipes, etc.) inside this method
+                // Draw the background
+                g.setColor(Color.CYAN);
+                g.fillRect(0, 0, getWidth(), getHeight());
+
+                // Draw the bird
+                g.setColor(Color.YELLOW);
+                g.fillRect(100, 300, 30, 30); // Example position and size for the bird
             }
         };
 

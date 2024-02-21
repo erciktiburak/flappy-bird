@@ -19,7 +19,9 @@ public class FlappyBirdMenu extends JFrame {
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO: Start the game
+                // Start the game
+                new FlappyBirdGame().setVisible(true);
+                dispose(); // Close the menu window
             }
         });
 
